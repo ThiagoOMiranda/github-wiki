@@ -1,70 +1,105 @@
-# Getting Started with Create React App
+# Projeto Educacional: **Github Wiki Explorer**
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Atividade proposta no curso: _Formação React Developer_
 
-## Available Scripts
+**_Desenvolvido por:_** _Thiago de Oliveira Miranda_.&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;[Github](https://github.com/ThiagoOMiranda)&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;[LinkedIn](https://www.linkedin.com/in/thiago-de-oliveira-miranda-5393181a7/)
 
-In the project directory, you can run:
+_Página da aplicação:_ [Github Wiki](https://thiagoomiranda.github.io/github-wiki/).
 
-### `yarn start`
+<br>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### **Sumário:**
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- <a href="#escopo">Escopo do Projeto</a>
+- <a href="#conhecimento">Conhecimento Aplicado</a>
+- <a href="#resultado">Resultado Obtido</a>
+- <a href="#licença">Licença</a>
 
-### `yarn test`
+<br>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### `Escopo do Projeto` <a name="escopo"></a>
 
-### `yarn build`
+O projeto consiste em uma _single page application_ que realiza consultas na API de dados do Github e apresenta miniaturas dos resultados da busca de forma dinâmica.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<br>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### `Conhecimento Aplicado` <a name="conhecimento"></a>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **_Axios:_** A biblioteca **_Axios_** é uma biblioteca de cliente HTTP que é usada para fazer solicitações HTTP a um servidor externo. No contexto do aplicativo, a biblioteca foi usada também para _setar_ a URL base para todas as solicitações HTTP através do recurso "_baseURL_", no qual cria um prefixo que é adicionado a todos os caminhos de URL fornecidos em cada solicitação.
 
-### `yarn eject`
+- **_ShortId:_** A biblioteca **_ShortId_** é uma biblioteca JavaScript usada para gerar identificadores exclusivos e aleatórios. Ao contrário de outras bibliotecas de geração de identificadores, a ShortId gera identificadores curtos, mas únicos. Usado para gerar a _key_ dos itens listados.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **React Hooks:**
+  - _useCallback_: É um _Hook_ do React que é usado para memoizar funções e evitar a criação desnecessária de funções em cada renderização de um componente.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Exemplo da estrutura de uma função callback:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```
+import React, { useCallback } from 'react';
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+const nomeDaFunção = useCallback(() => {
+    //Ações da função.
+}, [dependência]);
+```
 
-## Learn More
+No contexto o _useCallback_ recebe duas dependências, na primeira é a função que você deseja memoizar e a segunda é uma lista de dependências. Isso significa que a função será atualizada apenas quando o estado da dependência for atualizado.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- _useEffect_: É um _Hook_ do React que é usado para executar efeitos colaterais (como buscar dados de uma API ou atualizar o título de uma página) após a renderização do componente. Ele é executado após cada renderização do componente e recebe uma função de retorno que é usada para limpar os efeitos colaterais quando o componente é desmontado.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Exemplo da estrutura de uso do hook _useEffect_:
 
-### Code Splitting
+```
+import React, { useEffect } from 'react';
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+useEffect(() => {
+    //Função de callback.
+}
+    //Outra função.
+, [dependência]);
+```
 
-### Analyzing the Bundle Size
+<br>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+O _useEffect_ recebe uma função de callback como seu primeiro argumento, que será executada após a renderização do componente. Essa função pode retornar outra função que será usada para limpar os efeitos colaterais quando o componente for desmontado.
+Pode receber como segundo argumento, um array de dependências, que especifica quais variáveis o efeito é dependente. Se alguma das variáveis de dependência mudar, o _useEffect_ será executado novamente. Caso o array de dependências esteja vazio, o _useEffect_ será executado apenas uma vez após a renderização inicial do componente.
 
-### Making a Progressive Web App
+<br>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- _useState_: É um _Hook_ do React que permite a um componente ter estado interno e reativo, ou seja, que pode ser atualizado e refletido automaticamente no renderizado do componente.
 
-### Advanced Configuration
+Ele é usado para declarar uma variável de estado no componente e retorna um array com dois elementos: o primeiro é o valor atual do estado e o segundo é uma função que permite atualizar o valor do estado. A função para atualizar o estado pode ser chamada de qualquer lugar do componente, e a atualização do estado fará com que o componente seja re-renderizado automaticamente.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Exemplo da estrutura de uso do hook _useState_:
 
-### Deployment
+```
+import React, { useState } from 'react';
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+const [variavel, setVariavel] = useState(valorInicial);
 
-### `yarn build` fails to minify
+function atualizaValor() {
+    setVariavel = novoValor;
+}
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<br>
+
+## `Resultado Obtido` <a name="resultado"></a>
+
+### _UI da Aplicação_
+
+<p align="center"><img width="100%" src="Readme_files\UI-result.png"/></p>
+<p align="center"><i>Figura 01: Layout da página: versão desktop (esquerda) e versão mobile (direita)</i></p>
+
+1. Input de texto para busca.
+2. Botão de busca.
+3. Item de resultado da busca.
+4. Título e caminho do repositório.
+5. Descrição do repositório.
+6. Linguagens do repositório.
+7. Links de redirecionamento.
+
+<br>
+
+## `Licença` <a name="licença"></a>
+
+Este projeto está licenciado sob a Licença MIT. Consulte o arquivo LICENSE para obter mais informações.
