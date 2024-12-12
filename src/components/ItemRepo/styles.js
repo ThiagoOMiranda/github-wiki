@@ -49,14 +49,12 @@ export const ButtonContainer = styled.div`
   justify-content: start;
 
   a {
-    width: 15%;
-
     display: inline-flex;
     align-items: center;
-    white-space: nowrap;
+    width: 15%;
     padding: 2px;
-    margin-right: 2rem;
-
+    white-space: nowrap;
+    margin-right: 1.5rem;
     font-size: 1rem;
     text-decoration: none;
     color: #ddd;
@@ -71,16 +69,13 @@ export const ButtonContainer = styled.div`
   }
 
   button {
-    width: 15%;
     display: inline-flex;
     align-items: center;
-    white-space: nowrap;
-
+    width: 15%;
     padding: 2px;
-    /* margin-top: 8px; */
+    white-space: nowrap;
     font-size: 1rem;
     cursor: pointer;
-
     background-color: transparent;
     border: none;
     color: #ddd;
@@ -97,17 +92,22 @@ export const ButtonContainer = styled.div`
   .icon {
     width: 18px;
     height: 18px;
-
+    margin-right: 1rem;
     padding: 4px;
     border-radius: 3px;
-    margin-right: 1rem;
-
     background-color: #777;
     box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.25);
   }
 
   // Styles for small screens (max-width: 768px)
   @media (max-width: 768px) {
+    flex-direction: column;
+
+    a {
+      margin-right: 0;
+      margin-bottom: 1rem;
+    }
+
     a,
     button {
       width: 100%;
