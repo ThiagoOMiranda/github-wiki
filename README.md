@@ -97,6 +97,7 @@ function atualizaValor() {
 5. Descrição do repositório.
 6. Linguagens do repositório.
 7. Links de redirecionamento.
+8. Busca de todos os repositórios por usuário.
 
 <br>
 
