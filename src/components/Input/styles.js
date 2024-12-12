@@ -1,27 +1,20 @@
 import styled from "styled-components";
 
 export const InputContainer = styled.div`
-  height: 65px;
-  width: 80%;
-
   display: inline-flex;
   align-items: center;
-
-  margin: 40px 0;
+  width: 80%;
   padding: 8px;
+  margin-bottom: 40px;
   border: 1px solid #fafafa;
   border-radius: 10px;
   background: rgba(173, 181, 189, 0.075);
 
   input {
     width: 88%;
-    height: 62px;
-
     font-size: 1.125rem;
-
     border: 0;
     padding: 0 20px;
-
     color: #fff;
     background: transparent;
   }
@@ -43,20 +36,17 @@ export const InputContainer = styled.div`
   // Styles for small screens (max-width: 768px)
   @media (max-width: 768px) {
     & {
-      height: 120px;
       display: flex;
       flex-direction: column;
     }
     input {
-      width: 100%;
-      padding: 0 10px;
+      padding: 15px 5px 25px;
       &::placeholder {
         text-align: center;
       }
     }
     button {
       width: 100%;
-      height: 40%;
       font-size: larger;
     }
   }

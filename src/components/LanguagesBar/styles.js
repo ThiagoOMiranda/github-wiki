@@ -6,17 +6,18 @@ export const LanguagesBarContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  margin-bottom: 15px;
 
   p {
     margin-bottom: 10px;
   }
 
   div.languages-bar {
-    width: 100%;
-    height: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
+    height: 15px;
     margin-bottom: 10px;
     border: 1px solid #fafafa;
     border-radius: 15px;
@@ -24,16 +25,16 @@ export const LanguagesBarContainer = styled.div`
     filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.35));
 
     span.meter-bar {
-      height: 100%;
       display: inline-flex;
       align-items: center;
+      height: 100%;
     }
   }
 
   ul.languages {
-    width: 100%;
     display: inline-flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    width: 100%;
     list-style: none;
 
     li.language-item {

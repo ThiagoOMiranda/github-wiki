@@ -1,12 +1,10 @@
 import styled from "styled-components";
 
 export const ButtonContainer = styled.button`
-  height: 100%;
   width: 12%;
-
+  padding: 0.75rem 0;
   font-size: 0.875rem;
   font-weight: bold;
-
   background-color: #ddd;
   border: none;
   border-radius: 5px;

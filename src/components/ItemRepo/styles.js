@@ -1,16 +1,13 @@
 import styled from "styled-components";
 
 export const ItemContainer = styled.div`
-  width: 80%;
-
   display: flex;
   flex-direction: column;
-
+  width: 80%;
   padding: 20px 25px;
   border-radius: 10px;
   margin-bottom: 25px;
   border-bottom: 4px solid #fafafa35;
-
   background-color: #fafafa10;
   box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.25);
 
@@ -22,7 +19,9 @@ export const ItemContainer = styled.div`
   h3 {
     font-size: 2rem;
     margin-bottom: 8px;
-
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
     color: #fafafa;
     filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.5));
   }
@@ -30,28 +29,33 @@ export const ItemContainer = styled.div`
   p {
     font-size: 1rem;
     font-style: italic;
-
     margin-bottom: 20px;
     color: #fafafa60;
   }
 
   p.description {
     font-style: normal;
-
     padding: 20px;
     border-radius: 5px;
-
     color: #ddd;
     background-color: #cacaca25;
     box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.25);
   }
+`;
+
+export const ButtonContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: start;
 
   a {
     width: 15%;
 
     display: inline-flex;
     align-items: center;
+    white-space: nowrap;
     padding: 2px;
+    margin-right: 2rem;
 
     font-size: 1rem;
     text-decoration: none;
@@ -70,9 +74,10 @@ export const ItemContainer = styled.div`
     width: 15%;
     display: inline-flex;
     align-items: center;
+    white-space: nowrap;
 
     padding: 2px;
-    margin-top: 8px;
+    /* margin-top: 8px; */
     font-size: 1rem;
     cursor: pointer;
 

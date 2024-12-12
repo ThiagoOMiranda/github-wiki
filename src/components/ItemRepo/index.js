@@ -1,4 +1,4 @@
-import { ItemContainer } from "./styles";
+import { ButtonContainer, ItemContainer } from "./styles";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFileLines, faTrashCan } from "@fortawesome/free-solid-svg-icons";
 import LanguagesBar from "../LanguagesBar";
@@ -14,12 +14,14 @@ function ItemRepo({ repo, handleRemoveRepo }) {
       <p>{repo.full_name}</p>
       <p className="description">{repo.description}</p>
       <LanguagesBar repo={repo} />
+      <ButtonContainer>
       <a href={repo.html_url} target="_blank" rel="noreferrer">
         <FontAwesomeIcon icon={faFileLines} className="icon" /> Ver repositório
       </a>
       <button onClick={handleRemove}>
         <FontAwesomeIcon icon={faTrashCan} className="icon" /> Remover
       </button>
+      </ButtonContainer>
     </ItemContainer>
   );
 }
