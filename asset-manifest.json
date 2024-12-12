@@ -1,11 +1,11 @@
 {
   "files": {
-    "main.js": "/github-wiki/static/js/main.13109f4d.js",
+    "main.js": "/github-wiki/static/js/main.c20dff2d.js",
     "static/media/logo.png": "/github-wiki/static/media/logo.987334e9f782cc505f25.png",
     "index.html": "/github-wiki/index.html",
-    "main.13109f4d.js.map": "/github-wiki/static/js/main.13109f4d.js.map"
+    "main.c20dff2d.js.map": "/github-wiki/static/js/main.c20dff2d.js.map"
   },
   "entrypoints": [
-    "static/js/main.13109f4d.js"
+    "static/js/main.c20dff2d.js"
   ]
 }
